@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Real Madrid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Quiz Hala Madrid</h1>
+            <div class="progress">Pergunta <span id="current-question">1</span> de <span id="total-questions">3</span></div>
+        </header>
+        
+        <main>
+            <div id="question-text" class="question">Carregando pergunta...</div>
+            <div id="options-container" class="options-grid">
+            </div>
+        </main>
+
+        <footer>
+            <button id="next-btn" class="hidden">Próxima Pergunta</button>
+            <div id="score-container" class="hidden">
+                <h2>Fim do Jogo!</h2>
+                <p>Você acertou <span id="correct-answers">0</span> perguntas.</p>
+                <button onclick="restartQuiz()">Jogar Novamente</button>
+                <button><a href="index.html">Voltar para o site principal</a></button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
