@@ -1,0 +1,198 @@
+.login-page .login-container {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    background: var(--bg-color, #f4f7f6);
+}
+
+.login-page .login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 2.2rem;
+    background: var(--card-bg, #fff);
+    border: 1px solid rgba(13, 27, 42, 0.08);
+    border-top: 5px solid var(--accent-color, #c4963d);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(13, 27, 42, 0.10);
+}
+
+.login-page .login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+}
+
+.login-page .login-logo img {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+}
+
+.login-page .login-card h1 {
+    margin: 0;
+    color: var(--secondary-color, #0d1b2a);
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+}
+
+.login-page .login-subtitulo {
+    margin: 0.35rem 0 1.5rem;
+    color: #68717c;
+    text-align: center;
+}
+
+.login-page .login-card > input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.login-page .login-abas {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #dce1e5;
+}
+
+.login-page .login-abas label {
+    flex: 1;
+    padding: 0.8rem;
+    color: #68717c;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.login-page #aba-login:checked ~ .login-abas label[for="aba-login"],
+.login-page #aba-cadastro:checked ~ .login-abas label[for="aba-cadastro"] {
+    color: var(--secondary-color, #0d1b2a);
+    border-bottom-color: var(--accent-color, #c4963d);
+}
+
+.login-page .login-formularios form {
+    display: none;
+    flex-direction: column;
+}
+
+.login-page #aba-login:checked ~ .login-formularios .form-login,
+.login-page #aba-cadastro:checked ~ .login-formularios .form-cadastro {
+    display: flex;
+}
+
+.login-page .login-formularios h2 {
+    margin: 0 0 0.2rem;
+    color: var(--secondary-color, #0d1b2a);
+    text-align: center;
+    font-size: 1.35rem;
+}
+
+.login-page .login-form-descricao {
+    margin: 0 0 1.2rem;
+    color: #68717c;
+    text-align: center;
+}
+
+.login-page .login-formularios label {
+    display: block;
+    margin: 0 0 0.4rem;
+    color: var(--text-color, #0d1b2a);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.login-page .login-formularios input:not([type="checkbox"]) {
+    width: 100%;
+    min-height: 44px;
+    margin: 0 0 1rem;
+    padding: 0.75rem 0.85rem;
+    color: var(--text-color, #0d1b2a);
+    background: #fff;
+    border: 1px solid #cfd6dc;
+    border-radius: 6px;
+    outline: none;
+    font: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-page .login-formularios input:not([type="checkbox"]):focus {
+    border-color: var(--accent-color, #c4963d);
+    box-shadow: 0 0 0 3px rgba(196, 150, 61, 0.16);
+}
+
+.login-page .login-opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0.1rem 0 1.2rem;
+    font-size: 0.82rem;
+}
+
+.login-page .login-opcoes .login-lembrar,
+.login-page .login-termos {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.login-page .login-opcoes a {
+    color: #98712b;
+    text-decoration: none;
+}
+
+.login-page .login-opcoes a:hover {
+    text-decoration: underline;
+}
+
+.login-page .login-termos {
+    margin: 0.1rem 0 1.2rem;
+    font-size: 0.85rem;
+}
+
+.login-page .login-formularios input[type="checkbox"] {
+    accent-color: var(--secondary-color, #0d1b2a);
+}
+
+.login-page .login-formularios button {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    color: #fff;
+    background: var(--secondary-color, #0d1b2a);
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.login-page .login-formularios button:hover {
+    color: var(--secondary-color, #0d1b2a);
+    background: var(--accent-color, #c4963d);
+    transform: translateY(-2px);
+}
+
+.login-page .login-rodape {
+    margin: 1.5rem 0 0;
+    color: var(--secondary-color, #0d1b2a);
+    text-align: center;
+    font-weight: 600;
+}
+
+@media (max-width: 520px) {
+    .login-page .login-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .login-page .login-opcoes {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

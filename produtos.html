@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid C.F. | Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="produtos-extra.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="jogadores/logo.png" alt="Escudo do Real Madrid">
+        Real Madrid<span>C.F.</span>
+    </div>
+
+    <a href="#" class="botao-abrir-menu" onclick="abrirmenu(); return false;" aria-label="Abrir menu">☰</a>
+
+    <nav class="menu">
+        <a href="#" class="botao-fechar-menu" onclick="fecharmenu(); return false;" aria-label="Fechar menu">X</a>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="titulos.html">Títulos</a></li>
+            <li><a href="elenco.html">Elenco</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+            <li><a href="quiz.html">jogo</a></li>
+            <li><a href="produtos.html" aria-current="page">Produtos</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="https://www.realmadrid.com/pt-PT" target="_blank" rel="noopener noreferrer">Site Oficial</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Produtos do Real Madrid</h1>
+    <p>
+        Vista as cores do maior clube do mundo e demonstre sua paixão pelo
+        Real Madrid dentro e fora dos estádios.
+    </p>
+</section>
+
+<main class="container">
+    <section class="products-section">
+        <div class="products-title-row">
+            <h2 class="section-title">Produtos Oficiais</h2>
+            <button class="cart-open-button" id="abrir-carrinho" type="button">
+                🛒 Meu carrinho <span id="quantidade-carrinho">0</span>
+            </button>
+        </div>
+
+        <div class="products-grid" id="lista-produtos">
+            <!-- Os produtos são carregados pelo produtos.js -->
+        </div>
+    </section>
+
+    <section class="products-highlight">
+        <h2 class="section-title">Vista a Camisa do Madrid</h2>
+        <div class="highlight-content">
+            <h3>Paixão que atravessa gerações</h3>
+            <p>
+                O Real Madrid possui uma das camisas mais reconhecidas
+                do futebol mundial. Escolha seu produto favorito e
+                carregue consigo as cores de um clube repleto de
+                história, títulos e grandes jogadores.
+            </p>
+            <a href="https://www.realmadrid.com/pt-PT"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="product-button">
+                Site Oficial
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>
+        Página demonstrativa de projeto escolar.
+        Para conhecer o clube, visite o
+        <a href="https://www.realmadrid.com/pt-PT" target="_blank" rel="noopener noreferrer"
+           style="color: white; text-decoration: underline;">Site Oficial do Real Madrid</a>.
+    </p>
+</footer>
+
+<!-- Painel do carrinho -->
+<div class="cart-overlay" id="fundo-carrinho"></div>
+<aside class="cart-panel" id="painel-carrinho" aria-hidden="true" aria-label="Meu carrinho">
+    <div class="cart-panel-header">
+        <div>
+            <p class="cart-kicker">REAL MADRID C.F.</p>
+            <h2>Meu carrinho</h2>
+        </div>
+        <button class="cart-close" id="fechar-carrinho" type="button" aria-label="Fechar carrinho">×</button>
+    </div>
+
+    <div class="cart-items" id="itens-carrinho">
+        <p class="cart-empty">Seu carrinho está vazio. Escolha um produto para começar!</p>
+    </div>
+
+    <div class="cart-panel-footer">
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="total-carrinho">R$ 0,00</strong>
+        </div>
+        <button class="checkout-button" id="finalizar-compra" type="button">Finalizar pedido</button>
+        <p class="cart-disclaimer">Demonstração acadêmica: não há pagamento ou compra real.</p>
+    </div>
+</aside>
+
+<div class="product-toast" id="aviso-produto" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+<script src="produtos.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Hala Madrid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="quiz-wrapper">
+
+        <div class="quiz-container">
+
+            <header class="quiz-header">
+                <img src="jogadores/logo.png" alt="Escudo Real Madrid">
+                <h1>QUIZ HALA MADRID</h1>
+                <p>Teste seus conhecimentos sobre o maior clube do mundo!</p>
+            </header>
+
+            <div class="quiz-progress-info">
+                <span>Pergunta <span id="current-question">1</span></span>
+                <span>De <span id="total-questions">15</span></span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <main id="quiz-content">
+                <div id="question-text" class="question">
+                    Carregando pergunta...
+                </div>
+
+                <div id="options-container" class="options-grid">
+                </div>
+            </main>
+
+            <button id="next-btn" class="hidden">
+                PRÓXIMA PERGUNTA →
+            </button>
+
+            <div id="score-container" class="hidden">
+
+                <h2>FIM DE JOGO!</h2>
+
+                <p>Você acertou:</p>
+
+                <div class="final-score">
+                    <span id="correct-answers">0</span>
+                    <span>/ 15</span>
+                </div>
+
+                <p id="score-message"></p>
+
+                <button onclick="restartQuiz()">
+                    JOGAR NOVAMENTE
+                </button>
+
+                <a href="index.html" class="back-button">
+                    VOLTAR AO SITE
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="quiz.js"></script>
+
+</body>
+</html>
